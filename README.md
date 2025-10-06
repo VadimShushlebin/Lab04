@@ -33,11 +33,14 @@ https://github.com/VadimShushlebin/LAB02/blob/master/block%20shema.png
 ## 2. Реализация программы
 
 ﻿#include <stdio.h>
+
 #include <locale.h>
 
 int main()
 {
+    
     setlocale(LC_ALL, "RUS");
+    
     int A, B, C;
     int condition;
 
