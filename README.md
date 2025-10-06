@@ -24,9 +24,8 @@
 
 ### Блок-схема
 
-<img width="278" height="580" alt="block shema" src="https://github.com/user-attachments/assets/cf2d652d-1ab0-4b0f-bed2-2592276eb9c4" />
 
-https://github.com/VadimShushlebin/LAB02/blob/master/block%20shema.png
+
 
 
 
