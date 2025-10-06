@@ -24,6 +24,7 @@
 
 ### Блок-схема
 
+<img width="274" height="511" alt="image" src="https://github.com/user-attachments/assets/fd6c16a6-48ac-49d7-a6e7-77202d59b292" />
 
 
 
