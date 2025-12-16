@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+п»ї#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 
@@ -14,17 +14,17 @@ main() {
 
 	float int1, int2, tab;
 	char mode;
-	printf("Дозаписать в существующий файл - a\nСоздать новый файл - w\n");
+	printf("Р”РѕР·Р°РїРёСЃР°С‚СЊ РІ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ С„Р°Р№Р» - a\nРЎРѕР·РґР°С‚СЊ РЅРѕРІС‹Р№ С„Р°Р№Р» - w\n");
 	scanf("%c", &mode);
-	printf("Введите начало интервала: ");
+	printf("Р’РІРµРґРёС‚Рµ РЅР°С‡Р°Р»Рѕ РёРЅС‚РµСЂРІР°Р»Р°: ");
 	scanf("%f", &int1);
-	printf("Введите конец интервала: ");
+	printf("Р’РІРµРґРёС‚Рµ РєРѕРЅРµС† РёРЅС‚РµСЂРІР°Р»Р°: ");
 	scanf("%f", &int2);
-	printf("Введите шаг табуляции: ");
+	printf("Р’РІРµРґРёС‚Рµ С€Р°Рі С‚Р°Р±СѓР»СЏС†РёРё: ");
 	scanf("%f", &tab);
 	int k = function_tub(fname2, int1, int2, tab, mode);
-	if (k == 1) printf("Успех!");
-	else printf("Произошла ошибка!");
+	if (k == 1) printf("РЈСЃРїРµС…!");
+	else printf("РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°!");
 }
 
 
@@ -37,24 +37,24 @@ float func(float x) {
 int function_tub(char* fname, float interval1, float interval2, float tab, char mode) {
 
 	FILE* temp_t;
-	puts("Создание файла");
+	puts("РЎРѕР·РґР°РЅРёРµ С„Р°Р№Р»Р°");
 
 	if (mode == "at") {
 		if ((temp_t = fopen(fname, "a")) == NULL) {
-			printf("Ошибка открытия файла для записи");
+			printf("РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р° РґР»СЏ Р·Р°РїРёСЃРё");
 			return 0;
 		}
 	}
 	else {
 		if ((temp_t = fopen(fname, "w")) == NULL) {
-			printf("Ошибка открытия файла для записи");
+			printf("РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р° РґР»СЏ Р·Р°РїРёСЃРё");
 			return 0;
 		}
 	}
 
-	fprintf(temp_t, "Интервал значений: [%f;%f]\n", interval1, interval2);
-	fprintf(temp_t, "Шаг табуляции: %f\n\n", tab);
-	fprintf(temp_t, "Значения:\n");
+	fprintf(temp_t, "РРЅС‚РµСЂРІР°Р» Р·РЅР°С‡РµРЅРёР№: [%f;%f]\n", interval1, interval2);
+	fprintf(temp_t, "РЁР°Рі С‚Р°Р±СѓР»СЏС†РёРё: %f\n\n", tab);
+	fprintf(temp_t, "Р—РЅР°С‡РµРЅРёСЏ:\n");
 	for (float i = interval1; i <= interval2; i+=tab)
 	fprintf(temp_t, "%f\n", func(i));
 
